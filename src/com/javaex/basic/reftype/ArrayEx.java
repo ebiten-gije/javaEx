@@ -23,7 +23,7 @@ public class ArrayEx {
 		//	값을 가지고 있지 않고, 공간의 갯수만 알 수 있을 때
 		scores = new int[4];	//공간의 갯수 명시
 		//	index 0부터 시작
-		//	총 길이 .lenght - 1
+		//	총 길이 .length - 1
 		
 		scores[0] = 40;
 		scores[1] = 60;
