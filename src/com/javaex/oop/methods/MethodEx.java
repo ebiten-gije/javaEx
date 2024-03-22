@@ -5,11 +5,14 @@ public class MethodEx {
 	public static void main(String[] args) {
 		//	매개변수 X, 리턴 X
 		printMessage();
+		
 		//	매개변수 X, 리턴 O
 		String message = getMessage();
 		System.out.println(message);
+		
 		//	매개변수 O, 리턴 X
 		printDevide(4, 0);
+		
 		//	매개변수 O, 리턴 O
 		int num1 = 4, num2 = 5;
 		double sum = getSum(num1, num2, 6);
