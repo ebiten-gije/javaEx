@@ -1,4 +1,4 @@
-package com.javaex.oop.song1;
+package com.javaex.oop.song3;
 
 public class Song {
 	//	필드 선언;;
@@ -8,6 +8,22 @@ public class Song {
 	private String composer;
 	private int year;
 	private int track;
+	
+	public Song(String title, String artist) {
+		this.title = title;
+		this.artist = artist;
+	}
+	public Song(String title, String artist, String album, String composer, int year, int track) {
+		this(title, artist);
+		this.album = album;
+		this.composer = composer;
+		this.year = year;
+		this.track = track;
+	}
+	
+	public Song() {
+		
+	}
 	
 	//	getter/setters 필드에 우회 접근
 	public String getTitle() {

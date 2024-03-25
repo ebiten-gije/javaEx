@@ -1,4 +1,4 @@
-package com.javaex.oop.song1;
+package com.javaex.oop.song3;
 //	v1. 필드, getter/setter, 일반 메서드
 
 public class SongApp extends Song {
@@ -9,6 +9,9 @@ public class SongApp extends Song {
 		Song b = new Song();
 		Song c = new Song();
 		
+		Song s1 = new Song("좋은날", "아이유", "Real", "이민수", 2010, 3);
+		Song s2 = new Song("거짓말", "빅뱅", "Always", "G-dragon", 2077, 2);
+		Song s3 = new Song("벚꽃엔딩", "버스커버스커", "버스커버스커 1집", "장범준", 2012, 4);
 		
 		a.setAlbum("Real");
 		a.setArtist("아이유");
@@ -31,10 +34,14 @@ public class SongApp extends Song {
 		c.setTrack(4);
 		c.setYear(2012);
 		
-		a.showInfo();
+/*		a.showInfo();
 		b.showInfo();
 		c.showInfo();
-
+*/
+		s1.showInfo();
+		s2.showInfo();
+		s3.showInfo();
+		
 	}
 
 }
