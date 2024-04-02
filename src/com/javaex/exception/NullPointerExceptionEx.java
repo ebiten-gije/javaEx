@@ -1,6 +1,6 @@
 package com.javaex.exception;
 
-public class NillPointerExceptionEx {
+public class NullPointerExceptionEx {
 
 	public static void main(String[] args) {
 		

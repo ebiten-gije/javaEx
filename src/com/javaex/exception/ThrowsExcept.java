@@ -40,7 +40,7 @@ public class ThrowsExcept {
 		//	런타임 익셉션 -> 실행 타임에서만 확인되는 메서드
 		//	예외처리 없이도 컴파일은 됨
 		//	하지만 예외처리 거쳐야 안정성 보장
-		//	throw를 명시하지 않는다.
+		//	throws를 명시하지 않는다.
 		System.out.println("런타임 익셉션");
 		throw new RuntimeException("런타임 익셉션");
 	}
