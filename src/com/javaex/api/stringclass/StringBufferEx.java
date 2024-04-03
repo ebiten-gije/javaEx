@@ -35,3 +35,5 @@ public class StringBufferEx {
 	}
 
 }
+
+//	StringBuiler 싱글 쓰레드 용이래, 기능은 스트링 버퍼와 비슷한데, 멀티쓰레드 운용 가능한 편이..
