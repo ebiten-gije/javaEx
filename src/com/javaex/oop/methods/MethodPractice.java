@@ -16,7 +16,7 @@ public class MethodPractice {
 		System.out.println(sum);
 		
 		//	입력O 출력X
-		printOddOrEven(6);
+		printOddOrEven(65);
 		
 		printStringLength("ありがとうございます。");
 		
