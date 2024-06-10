@@ -2,13 +2,13 @@ package com.javaex.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Date;
 import java.util.Scanner;
 
-public class HRSearchEmployee {
+public class HRSearchEmployeesPstmt {
 
 	public static void main(String[] args) {
 		
@@ -24,12 +24,11 @@ public class HRSearchEmployee {
 		
 		Connection conn = null;
 		ResultSet rs = null;
-		Statement stmt = null;		
+		PreparedStatement pstmt = null;		
 		Scanner sc = new Scanner(System.in);
 		
 		try {
 			conn = DriverManager.getConnection(sbUrl, id, pw);
-			stmt = conn.createStatement();
 			
 			System.out.println("검색할 내용을 입력");
 			
@@ -40,10 +39,15 @@ public class HRSearchEmployee {
 			String sql = "select first_name || ' ' || last_name, "
 					+ "email, phone_number, hire_date hd"
 					+ " from employees "
-					+ "where upper(first_name) like '%" + upperIns +"%'"
-							+ "or upper(last_name) like '%" + upperIns + "%'";
+					+ "where upper(first_name) like ?"
+							+ "or upper(last_name) like ?";
 			
-			rs = stmt.executeQuery(sql);
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, "%" + upperIns + "%");
+			pstmt.setString(2, "%" + upperIns + "%");
+			
+			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
 				String nm = rs.getString(1);
@@ -65,7 +69,6 @@ public class HRSearchEmployee {
 				e.printStackTrace();
 			}
 		}
-		
 		
 	}
 
